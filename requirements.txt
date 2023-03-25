@@ -1,0 +1,7 @@
+# Task1
+
+# Task2
+aiohttp
+pydantic==1.10.5
+
+# Task3
