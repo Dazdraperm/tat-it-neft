@@ -13,11 +13,11 @@ class SiteParser:
         async with ClientSession() as session:
             async with session.get(url=url) as response:
                 source_code = await response.read()
+                host = response.host
 
-                site = Site(
-                    host_name=response.host,
-                    source_code=source_code,
-                )
+        site = Site(
+            host_name=host,
+            source_code=source_code,
+        )
 
-                return site
-    # TODO call_api
+        return site
